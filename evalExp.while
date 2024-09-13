@@ -1,0 +1,6 @@
+evalExp  // Use "./hwhile -iv evalExp 0" 
+read x {
+  // change to any expression you want to evaluate
+  x := cons nil cons nil cons hd cons nil cons nil nil cons nil nil
+
+} write x

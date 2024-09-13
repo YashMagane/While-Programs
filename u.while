@@ -1,0 +1,40 @@
+(* u.while
+
+  The universal program for WHILE (i.e. the self-interpreter)
+
+   This program takes as input a list [p,d]  where
+
+    p is a WHILE program encoded as list
+    d is a value in WHILE-data  
+
+    and interprets the program p with input d 
+    so the output is [|p|](d)
+
+
+   (c) 2008-23 Bernhard Reus 
+       Why not get the Limits book: https://www.springer.com/gb/book/9783319278872
+
+*)
+
+u read PD {
+	 
+ P := hd PD;              // P = [X,B,Y] 
+ D := hd tl PD;           // D is input value
+ X := hd P; 		  // X is input var name
+ Y := hd tl tl P;         // Y  is output var name
+ B := hd tl P;            // B is program code block
+ CSt := B;                // CSt is code stack, initialised with the program
+ DSt := nil;              // DSt is data stack for intermediate results
+
+ bind := [X,D];
+ St := [bind];		       // initialise store with binding for X
+ state := [ CSt, DSt, St ];    // wrap state for STEP macro 
+ while CSt { 
+    state := <STEPn> state;    // execute the STEP macro while there is code to execute 
+    CSt := hd state
+ };
+ St := hd tl tl state;        // get final store 	
+ arg := [ Y, St ];            // wrap arguments for lookup				
+ Out := <lookup> arg          // lookup output var’s value
+}  
+write Out

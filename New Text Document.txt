@@ -1,0 +1,8 @@
+
+test1 read X {
+    L1 := cons 1 cons 2 cons 3 nil; // Represents the list [1,2,3]
+    L2 := cons 4 cons 5 nil;  
+     // Represents the list [4,5]
+    Result := <concat> L1 L2;
+    write Result;
+}

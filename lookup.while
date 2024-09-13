@@ -1,0 +1,22 @@
+(* lookup.while
+
+ This program in (extended) WHILE takes as input a list [X, Store] where
+
+  X     is a number (in list form) that can be 0.
+  Store is a list of bindings containing the variables' values (store)
+
+  output is a value (in D i.e. binary tree)
+  namely the value of the (X-1)-th variable in Store
+	
+  Exceptional case: 
+  if X is greater than the length of  Store - 1,
+  i.e. if one looks up a variable that has not been
+  initialised, then the result is nil
+  which means that uninitialised variables
+  are implicitly initialised with nil
+
+   (c) 2008-23 Bernhard Reus 
+	
+*)
+
+lookup read XS {		(* argument XS is list [X, Store] *)   X := hd XS;			(* X is number encoding variable we are looking for *)   St := hd tl XS; 		(* Store contains list of bindings *)				(* do the lookup; this destroys the Store *)  while St {			(* run through store list *)     bind := hd St; 		(* bind is current binding *)     N := hd bind; 		(* N is var number of bind *)     if N=X {			(* found right variable *)        Res := hd tl bind; 	(* Res is value of X *)        St := nil		(* reset St to exit loop *)        }     else { 			(* variable X not found yet *)          St := tl St 		(* drop first binding off store *)        } 			(* end of if-the-else *)   } 				(* end of while loop *)}write Res

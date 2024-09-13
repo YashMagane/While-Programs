@@ -1,0 +1,30 @@
+case 8: 
+     args2:= hd Dst; 
+     DSt := tl DSt; 
+     arg := hd DSt; 
+     DSt := tl DSt; 
+     concatenatedList := nil;
+     tempStack := nil;
+
+      while arg {
+        tempStack := cons (hd arg) tempStack;
+        arg := tl arg
+      };
+
+      while tempStack {
+        concatenatedList := cons (hd tempStack) concatenatedList;
+        tempStack := tl tempStack
+      };
+
+      while arg2 {
+        tempStack := cons (hd arg2) tempStack;
+        arg2 := tl arg2
+      };
+
+      while tempStack {
+        concatenatedList := cons (hd tempStack) concatenatedList;
+        tempStack := tl tempStack
+      };
+
+    DSt := cons concatenatedList DSt;
+    CSt := tl CSt

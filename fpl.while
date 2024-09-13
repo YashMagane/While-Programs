@@ -1,0 +1,12 @@
+fpl read X {
+  Y := cons nil nil;
+  while X {
+    Z := hd X;
+    if Z { X := tl X }
+   else {
+      Y := nil;
+      X := nil 
+    }
+  }
+}
+write Y

@@ -1,0 +1,107 @@
+//Candidate Number: 249763
+(* STEPn.while
+
+ This is the STEP macro for the  universal WHILE program (self-interpreter)
+ ie.  the STEPn.while program published on our 
+ Canvas site:
+
+   It takes as input a list
+   [ CSt, DSt, St ]         where
+
+     * we may assume that CSt only contains correctly encoded program statements and expressions
+      (so no error handling needed)
+	 
+     * CSt is the command stack (for program traversal)
+     * DSt is the data stack (intermediate results)
+     * St is the program store (memory) for variables
+	
+    Output is a new state   [ CSt1, DSt1, St1] 
+    according to th interpretation of the topmost element of CSt. 
+
+   (c) 2018-21 Bernhard Reus 
+
+ This needs to be tested with the self interpreter u.while from Canvas
+ and the macros update.while, lookup.while,  and reverse.while also from Canvas
+
+ 
+*)
+
+STEPn read state {
+    // retrieve individual arguments from list
+    CSt := hd state;
+    DSt:= hd tl state;
+    St:= hd tl tl state;
+    C:= hd CSt;   // current command encoding on top of Command stack
+    d:= hd C;     // is nil if C is a do_marker, otherwise not
+    if d {
+         // top level command executed that is of shape [op,arg1,...]
+         cur_op := d; // type of current command
+   	 arg := hd tl C;
+  	 arg2 := hd tl tl C; 
+   	 switch cur_op {
+    		case @quote: DSt:= cons arg DSt; CSt:= tl CSt
+     		case @var: V := <lookup> [arg, St];  DSt := cons V DSt; CSt:= tl CSt
+     		case @hd: CSt:= cons arg cons @doHd (tl CSt)
+     		case @tl: CSt:= cons arg cons @doTl (tl CSt)
+ 		    case @cons:  CSt := cons arg2 cons arg cons @doCons (tl CSt)                 
+ 		    case @:=: CSt := cons arg2 cons @doAsgn cons arg (tl CSt)                   
+        case @while: CSt:= cons arg cons @doWhile CSt
+		    case @if:  CSt:= cons arg cons @doIf CSt     
+        //@concat
+        //taking both arguments and place it ontop of command stack.
+        //for operation handling, call case 8 for action
+		    case 4:  CSt := cons arg2 cons arg cons 8 (tl CSt)
+	      //@break
+        //break no arguments - trying to halt the loop
+        case 6:   CSt:= cons args cons 10 (tl CSt)
+        } // end switch
+  } else
+    {
+      // do_marker to be executed 
+     arg:= hd DSt;
+     switch C {
+      //@doConcat
+      //pop second arg from data stack, concat arg with args2 using macro, place result ontop of data stack
+      //move to next command in the command stack
+     case 8: args2:= hd tl DSt; temp := <concat> [arg,args2]; DSt := cons temp (tl tl DSt);CSt := tl CSt
+      //@doBreak
+      //failed to attempt the break command
+     case 10: CSt := tl CSt
+     case @doHd:    DSt:= cons (hd arg) (tl DSt); CSt:= tl CSt
+     case @doTl:    DSt:= cons (tl arg) (tl DSt); CSt:= tl CSt
+     case @doCons:  arg2:= hd tl DSt; DSt := cons (cons arg arg2) (tl tl DSt); CSt:= tl CSt
+     case @doAsgn:  X := hd tl CSt;  St:= <update>[X,arg,St]; DSt:= tl DSt; CSt:= tl tl CSt
+     case @doWhile: if arg { wc:= hd tl CSt;
+     	  	       	     CSt:= tl CSt;
+                             B:= hd tl tl wc; // block to be added to current commands
+			     // add the commands of B in right order onto tl Stack;
+			     B := <reverse> B; // reverse to get the right order
+			     while B
+			     { CSt:= cons (hd B) CSt;
+			       B:= tl B
+			     }
+                    } else 
+                      {  
+                         CSt := tl tl CSt   
+		      } ; 
+		    DSt := tl DSt
+			
+     case @doIf:   ifc:= hd tl CSt;
+     	  	   if arg {
+                        B:= hd tl tl ifc // then block to be added to current commands
+                     } else {
+		      B:= hd tl tl tl ifc // else block to be added to current commands
+		    };
+		    CSt:= tl tl CSt;
+		    // add the commands of B in right order onto tl Stack;
+		    B := <reverse> B; // reverse to get the right order
+	            while B
+			     { CSt := cons (hd B) CSt;
+			       B := tl B
+			     };
+		    DSt := tl DSt
+                  } // end switch
+    }; // end else  do_smth case
+   newState :=  [ CSt, DSt, St ]
+}
+write newState

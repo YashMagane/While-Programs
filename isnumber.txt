@@ -1,0 +1,21 @@
+isnumber read X {
+  if X { // If X is not nil, check its structure
+    Y := X; // Use Y for iteration to preserve original input
+    Z := nil; // Initialize Z to nil; will use as a flag for the loop
+    while Y { // Iterate over the tree
+      if hd Y { // If the head of Y is not nil, it's not a number
+        Z := cons nil nil; // Set Z as not nil to indicate false
+        Y := nil; // Break the loop
+      } else {
+        Y := tl Y; // Move to the next right node
+      }
+    }
+    if Z { // Check if Z was set to indicate false
+      write nil; // Not a number
+    } else {
+      write cons nil nil; // Is a number
+    }
+  } else {
+    write cons nil nil; // Is a number (0)
+  }
+} 

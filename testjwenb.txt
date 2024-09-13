@@ -1,0 +1,1092 @@
+hwhile -i u.while"[[ 0
+,
+    [ [@:=, 1, [@hd, [@var, 0]]]
+    , [@:=, 2, [@hd, [@tl, [@var, 0]]]]
+    , [@:=, 3, [@hd, [@tl, [@tl, [@var, 0]]]]]
+    , [@:=, 4, [@hd, [@var, 1]]]
+    , [@:=, 5, [@hd, [@var, 4]]]
+    ,
+        [ @if, [@var, 5]
+        ,
+            [ [@:=, 28, [@var, 5]]
+            , [@:=, 6, [@hd, [@tl, [@var, 4]]]]
+            , [@:=, 23, [@hd, [@tl, [@tl, [@var, 4]]]]]
+            , [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]], [@quote, nil]]], [@quote, nil]]]
+            ,
+                [ @if, [@quote, nil]
+                , []
+                ,
+                    [ [@:=, 50, [@cons, [@quote, nil], [@quote, nil]]]
+                    ,
+                        [ @while, [@var, 38]
+                        ,
+                            [ [@:=, 39, [@hd, [@var, 38]]]
+                            , [@:=, 38, [@tl, [@var, 38]]]
+                            , [@:=, 40, [@hd, [@var, 39]]]
+                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                            ,
+                                [ @if, [@var, 40]
+                                ,
+                                    [
+                                        [ @if, [@var, 41]
+                                        ,
+                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                            ]
+                                        ,
+                                            [ [@:=, 38, [@quote, nil]]
+                                            , [@:=, 50, [@quote, nil]]
+                                            ]
+                                        ]
+                                    ]
+                                ,
+                                    [
+                                        [ @if, [@var, 41]
+                                        ,
+                                            [ [@:=, 38, [@quote, nil]]
+                                            , [@:=, 50, [@quote, nil]]
+                                            ]
+                                        , []
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ,
+                [ @if, [@var, 50]
+                ,
+                    [ [@:=, 1, [@cons, [@var, 23], [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]], [@tl, [@var, 1]]]]]]
+                    ]
+                ,
+                    [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                    ,
+                        [ @if, [@quote, nil]
+                        , []
+                        ,
+                            [ [@:=, 49, [@cons, [@quote, nil], [@quote, nil]]]
+                            ,
+                                [ @while, [@var, 38]
+                                ,
+                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                    ,
+                                        [ @if, [@var, 40]
+                                        ,
+                                            [
+                                                [ @if, [@var, 41]
+                                                ,
+                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                    ]
+                                                ,
+                                                    [ [@:=, 38, [@quote, nil]]
+                                                    , [@:=, 49, [@quote, nil]]
+                                                    ]
+                                                ]
+                                            ]
+                                        ,
+                                            [
+                                                [ @if, [@var, 41]
+                                                ,
+                                                    [ [@:=, 38, [@quote, nil]]
+                                                    , [@:=, 49, [@quote, nil]]
+                                                    ]
+                                                , []
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ,
+                        [ @if, [@var, 49]
+                        ,
+                            [ [@:=, 2, [@cons, [@var, 6], [@var, 2]]]
+                            , [@:=, 1, [@tl, [@var, 1]]]
+                            ]
+                        ,
+                            [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                            ,
+                                [ @if, [@quote, nil]
+                                , []
+                                ,
+                                    [ [@:=, 48, [@cons, [@quote, nil], [@quote, nil]]]
+                                    ,
+                                        [ @while, [@var, 38]
+                                        ,
+                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                            ,
+                                                [ @if, [@var, 40]
+                                                ,
+                                                    [
+                                                        [ @if, [@var, 41]
+                                                        ,
+                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                            ]
+                                                        ,
+                                                            [ [@:=, 38, [@quote, nil]]
+                                                            , [@:=, 48, [@quote, nil]]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ,
+                                                    [
+                                                        [ @if, [@var, 41]
+                                                        ,
+                                                            [ [@:=, 38, [@quote, nil]]
+                                                            , [@:=, 48, [@quote, nil]]
+                                                            ]
+                                                        , []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ,
+                                [ @if, [@var, 48]
+                                ,
+                                    [ [@:=, 29, [@cons, [@var, 6], [@cons, [@var, 3], [@quote, nil]]]]
+                                    , [@:=, 30, [@quote, nil]]
+                                    , [@:=, 31, [@quote, nil]]
+                                    , [@:=, 32, [@quote, nil]]
+                                    , [@:=, 33, [@quote, nil]]
+                                    , [@:=, 34, [@quote, nil]]
+                                    , [@:=, 33, [@hd, [@var, 29]]]
+                                    , [@:=, 32, [@hd, [@tl, [@var, 29]]]]
+                                    ,
+                                        [ @while, [@var, 32]
+                                        ,
+                                            [ [@:=, 34, [@hd, [@var, 32]]]
+                                            , [@:=, 30, [@hd, [@var, 34]]]
+                                            , [@:=, 38, [@cons, [@cons, [@var, 30], [@cons, [@var, 33], [@quote, nil]]], [@quote, nil]]]
+                                            ,
+                                                [ @if, [@quote, nil]
+                                                , []
+                                                ,
+                                                    [ [@:=, 37, [@cons, [@quote, nil], [@quote, nil]]]
+                                                    ,
+                                                        [ @while, [@var, 38]
+                                                        ,
+                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                            ,
+                                                                [ @if, [@var, 40]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            ]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 37, [@quote, nil]]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 37, [@quote, nil]]
+                                                                            ]
+                                                                        , []
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ,
+                                                [ @if, [@var, 37]
+                                                ,
+                                                    [ [@:=, 31, [@hd, [@tl, [@var, 34]]]]
+                                                    , [@:=, 32, [@quote, nil]]
+                                                    ]
+                                                ,
+                                                    [ [@:=, 32, [@tl, [@var, 32]]]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    , [@:=, 35, [@var, 31]]
+                                    , [@:=, 2, [@cons, [@var, 35], [@var, 2]]]
+                                    , [@:=, 1, [@tl, [@var, 1]]]
+                                    ]
+                                ,
+                                    [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                    ,
+                                        [ @if, [@quote, nil]
+                                        , []
+                                        ,
+                                            [ [@:=, 47, [@cons, [@quote, nil], [@quote, nil]]]
+                                            ,
+                                                [ @while, [@var, 38]
+                                                ,
+                                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                    ,
+                                                        [ @if, [@var, 40]
+                                                        ,
+                                                            [
+                                                                [ @if, [@var, 41]
+                                                                ,
+                                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                    ]
+                                                                ,
+                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                    , [@:=, 47, [@quote, nil]]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ,
+                                                            [
+                                                                [ @if, [@var, 41]
+                                                                ,
+                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                    , [@:=, 47, [@quote, nil]]
+                                                                    ]
+                                                                , []
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ,
+                                        [ @if, [@var, 47]
+                                        ,
+                                            [ [@:=, 1, [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@tl, [@var, 1]]]]]
+                                            ]
+                                        ,
+                                            [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                            ,
+                                                [ @if, [@quote, nil]
+                                                , []
+                                                ,
+                                                    [ [@:=, 46, [@cons, [@quote, nil], [@quote, nil]]]
+                                                    ,
+                                                        [ @while, [@var, 38]
+                                                        ,
+                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                            ,
+                                                                [ @if, [@var, 40]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            ]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 46, [@quote, nil]]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 46, [@quote, nil]]
+                                                                            ]
+                                                                        , []
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ,
+                                                [ @if, [@var, 46]
+                                                ,
+                                                    [ [@:=, 1, [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@tl, [@var, 1]]]]]
+                                                    ]
+                                                ,
+                                                    [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                                    ,
+                                                        [ @if, [@quote, nil]
+                                                        , []
+                                                        ,
+                                                            [ [@:=, 45, [@cons, [@quote, nil], [@quote, nil]]]
+                                                            ,
+                                                                [ @while, [@var, 38]
+                                                                ,
+                                                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                    ,
+                                                                        [ @if, [@var, 40]
+                                                                        ,
+                                                                            [
+                                                                                [ @if, [@var, 41]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                    ]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                    , [@:=, 45, [@quote, nil]]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ,
+                                                                            [
+                                                                                [ @if, [@var, 41]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                    , [@:=, 45, [@quote, nil]]
+                                                                                    ]
+                                                                                , []
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ,
+                                                        [ @if, [@var, 45]
+                                                        ,
+                                                            [ [@:=, 1, [@cons, [@var, 23], [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@tl, [@var, 1]]]]]]
+                                                            ]
+                                                        ,
+                                                            [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]], [@quote, nil]]], [@quote, nil]]]
+                                                            ,
+                                                                [ @if, [@quote, nil]
+                                                                , []
+                                                                ,
+                                                                    [ [@:=, 44, [@cons, [@quote, nil], [@quote, nil]]]
+                                                                    ,
+                                                                        [ @while, [@var, 38]
+                                                                        ,
+                                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                            ,
+                                                                                [ @if, [@var, 40]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            ]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 44, [@quote, nil]]
+                                                                                            ]
+                                                                                        ]
+                                                                                    ]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 44, [@quote, nil]]
+                                                                                            ]
+                                                                                        , []
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ,
+                                                                [ @if, [@var, 44]
+                                                                ,
+                                                                    [ [@:=, 1, [@cons, [@var, 23], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]], [@cons, [@var, 6], [@tl, [@var, 1]]]]]]
+                                                                    ]
+                                                                ,
+                                                                    [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                                                    ,
+                                                                        [ @if, [@quote, nil]
+                                                                        , []
+                                                                        ,
+                                                                            [ [@:=, 43, [@cons, [@quote, nil], [@quote, nil]]]
+                                                                            ,
+                                                                                [ @while, [@var, 38]
+                                                                                ,
+                                                                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                                                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                                                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                                    ,
+                                                                                        [ @if, [@var, 40]
+                                                                                        ,
+                                                                                            [
+                                                                                                [ @if, [@var, 41]
+                                                                                                ,
+                                                                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                                    ]
+                                                                                                ,
+                                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                                    , [@:=, 43, [@quote, nil]]
+                                                                                                    ]
+                                                                                                ]
+                                                                                            ]
+                                                                                        ,
+                                                                                            [
+                                                                                                [ @if, [@var, 41]
+                                                                                                ,
+                                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                                    , [@:=, 43, [@quote, nil]]
+                                                                                                    ]
+                                                                                                , []
+                                                                                                ]
+                                                                                            ]
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ,
+                                                                        [ @if, [@var, 43]
+                                                                        ,
+                                                                            [ [@:=, 1, [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]], [@var, 1]]]]
+                                                                            ]
+                                                                        ,
+                                                                            [ [@:=, 38, [@cons, [@cons, [@var, 28], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                                                            ,
+                                                                                [ @if, [@quote, nil]
+                                                                                , []
+                                                                                ,
+                                                                                    [ [@:=, 42, [@cons, [@quote, nil], [@quote, nil]]]
+                                                                                    ,
+                                                                                        [ @while, [@var, 38]
+                                                                                        ,
+                                                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                                            ,
+                                                                                                [ @if, [@var, 40]
+                                                                                                ,
+                                                                                                    [
+                                                                                                        [ @if, [@var, 41]
+                                                                                                        ,
+                                                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                                            ]
+                                                                                                        ,
+                                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                                            , [@:=, 42, [@quote, nil]]
+                                                                                                            ]
+                                                                                                        ]
+                                                                                                    ]
+                                                                                                ,
+                                                                                                    [
+                                                                                                        [ @if, [@var, 41]
+                                                                                                        ,
+                                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                                            , [@:=, 42, [@quote, nil]]
+                                                                                                            ]
+                                                                                                        , []
+                                                                                                        ]
+                                                                                                    ]
+                                                                                                ]
+                                                                                            ]
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ,
+                                                                                [ @if, [@var, 42]
+                                                                                ,
+                                                                                    [ [@:=, 1, [@cons, [@var, 6], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]], [@var, 1]]]]
+                                                                                    ]
+                                                                                , []
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ,
+            [ [@:=, 6, [@hd, [@var, 2]]]
+            , [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+            ,
+                [ @if, [@quote, nil]
+                , []
+                ,
+                    [ [@:=, 58, [@cons, [@quote, nil], [@quote, nil]]]
+                    ,
+                        [ @while, [@var, 38]
+                        ,
+                            [ [@:=, 39, [@hd, [@var, 38]]]
+                            , [@:=, 38, [@tl, [@var, 38]]]
+                            , [@:=, 40, [@hd, [@var, 39]]]
+                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                            ,
+                                [ @if, [@var, 40]
+                                ,
+                                    [
+                                        [ @if, [@var, 41]
+                                        ,
+                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                            ]
+                                        ,
+                                            [ [@:=, 38, [@quote, nil]]
+                                            , [@:=, 58, [@quote, nil]]
+                                            ]
+                                        ]
+                                    ]
+                                ,
+                                    [
+                                        [ @if, [@var, 41]
+                                        ,
+                                            [ [@:=, 38, [@quote, nil]]
+                                            , [@:=, 58, [@quote, nil]]
+                                            ]
+                                        , []
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ,
+                [ @if, [@var, 58]
+                ,
+                    [ [@:=, 24, [@hd, [@var, 25]]]
+                    , [@:=, 2, [@tl, [@var, 2]]]
+                    , [@:=, 6, [@hd, [@var, 2]]]
+                    , [@:=, 2, [@tl, [@var, 2]]]
+                    , [@:=, 26, [@quote, nil]]
+                    , [@:=, 27, [@quote, nil]]
+                    ,
+                        [ @while, [@var, 6]
+                        ,
+                            [ [@:=, 27, [@cons, [@hd, [@var, 6]], [@var, 27]]]
+                            , [@:=, 6, [@tl, [@var, 6]]]
+                            ]
+                        ]
+                    ,
+                        [ @while, [@var, 27]
+                        ,
+                            [ [@:=, 26, [@cons, [@hd, [@var, 27]], [@var, 26]]]
+                            , [@:=, 27, [@tl, [@var, 27]]]
+                            ]
+                        ]
+                    ,
+                        [ @while, [@var, 23]
+                        ,
+                            [ [@:=, 27, [@cons, [@hd, [@var, 23]], [@var, 27]]]
+                            , [@:=, 23, [@tl, [@var, 23]]]
+                            ]
+                        ]
+                    ,
+                        [ @while, [@var, 27]
+                        ,
+                            [ [@:=, 26, [@cons, [@hd, [@var, 27]], [@var, 26]]]
+                            , [@:=, 27, [@tl, [@var, 27]]]
+                            ]
+                        ]
+                    , [@:=, 2, [@cons, [@var, 26], [@var, 2]]]
+                    , [@:=, 1, [@tl, [@var, 1]]]
+                    ]
+                ,
+                    [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                    ,
+                        [ @if, [@quote, nil]
+                        , []
+                        ,
+                            [ [@:=, 57, [@cons, [@quote, nil], [@quote, nil]]]
+                            ,
+                                [ @while, [@var, 38]
+                                ,
+                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                    ,
+                                        [ @if, [@var, 40]
+                                        ,
+                                            [
+                                                [ @if, [@var, 41]
+                                                ,
+                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                    ]
+                                                ,
+                                                    [ [@:=, 38, [@quote, nil]]
+                                                    , [@:=, 57, [@quote, nil]]
+                                                    ]
+                                                ]
+                                            ]
+                                        ,
+                                            [
+                                                [ @if, [@var, 41]
+                                                ,
+                                                    [ [@:=, 38, [@quote, nil]]
+                                                    , [@:=, 57, [@quote, nil]]
+                                                    ]
+                                                , []
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ,
+                        [ @if, [@var, 57]
+                        ,
+                            [ [@:=, 2, [@cons, [@hd, [@var, 6]], [@tl, [@var, 2]]]]
+                            , [@:=, 1, [@tl, [@var, 1]]]
+                            ]
+                        ,
+                            [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                            ,
+                                [ @if, [@quote, nil]
+                                , []
+                                ,
+                                    [ [@:=, 56, [@cons, [@quote, nil], [@quote, nil]]]
+                                    ,
+                                        [ @while, [@var, 38]
+                                        ,
+                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                            ,
+                                                [ @if, [@var, 40]
+                                                ,
+                                                    [
+                                                        [ @if, [@var, 41]
+                                                        ,
+                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                            ]
+                                                        ,
+                                                            [ [@:=, 38, [@quote, nil]]
+                                                            , [@:=, 56, [@quote, nil]]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ,
+                                                    [
+                                                        [ @if, [@var, 41]
+                                                        ,
+                                                            [ [@:=, 38, [@quote, nil]]
+                                                            , [@:=, 56, [@quote, nil]]
+                                                            ]
+                                                        , []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ,
+                                [ @if, [@var, 56]
+                                ,
+                                    [ [@:=, 2, [@cons, [@tl, [@var, 6]], [@tl, [@var, 2]]]]
+                                    , [@:=, 1, [@tl, [@var, 1]]]
+                                    ]
+                                ,
+                                    [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                    ,
+                                        [ @if, [@quote, nil]
+                                        , []
+                                        ,
+                                            [ [@:=, 55, [@cons, [@quote, nil], [@quote, nil]]]
+                                            ,
+                                                [ @while, [@var, 38]
+                                                ,
+                                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                    ,
+                                                        [ @if, [@var, 40]
+                                                        ,
+                                                            [
+                                                                [ @if, [@var, 41]
+                                                                ,
+                                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                    ]
+                                                                ,
+                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                    , [@:=, 55, [@quote, nil]]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ,
+                                                            [
+                                                                [ @if, [@var, 41]
+                                                                ,
+                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                    , [@:=, 55, [@quote, nil]]
+                                                                    ]
+                                                                , []
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ,
+                                        [ @if, [@var, 55]
+                                        ,
+                                            [ [@:=, 23, [@hd, [@tl, [@var, 2]]]]
+                                            , [@:=, 2, [@cons, [@cons, [@var, 6], [@var, 23]], [@tl, [@tl, [@var, 2]]]]]
+                                            , [@:=, 1, [@tl, [@var, 1]]]
+                                            ]
+                                        ,
+                                            [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]], [@quote, nil]]], [@quote, nil]]]
+                                            ,
+                                                [ @if, [@quote, nil]
+                                                , []
+                                                ,
+                                                    [ [@:=, 54, [@cons, [@quote, nil], [@quote, nil]]]
+                                                    ,
+                                                        [ @while, [@var, 38]
+                                                        ,
+                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                            ,
+                                                                [ @if, [@var, 40]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                            ]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 54, [@quote, nil]]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ,
+                                                                    [
+                                                                        [ @if, [@var, 41]
+                                                                        ,
+                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                            , [@:=, 54, [@quote, nil]]
+                                                                            ]
+                                                                        , []
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ,
+                                                [ @if, [@var, 54]
+                                                ,
+                                                    [ [@:=, 12, [@hd, [@tl, [@var, 1]]]]
+                                                    , [@:=, 13, [@cons, [@var, 12], [@cons, [@var, 6], [@cons, [@var, 3], [@quote, nil]]]]]
+                                                    , [@:=, 14, [@quote, nil]]
+                                                    , [@:=, 15, [@quote, nil]]
+                                                    , [@:=, 16, [@quote, nil]]
+                                                    , [@:=, 17, [@quote, nil]]
+                                                    , [@:=, 18, [@quote, nil]]
+                                                    , [@:=, 19, [@quote, nil]]
+                                                    , [@:=, 20, [@quote, nil]]
+                                                    , [@:=, 21, [@quote, nil]]
+                                                    , [@:=, 22, [@quote, nil]]
+                                                    , [@:=, 19, [@hd, [@var, 13]]]
+                                                    , [@:=, 18, [@hd, [@tl, [@var, 13]]]]
+                                                    , [@:=, 17, [@hd, [@tl, [@tl, [@var, 19]]]]]
+                                                    , [@:=, 22, [@cons, [@var, 19], [@cons, [@var, 18], [@quote, nil]]]]
+                                                    , [@:=, 16, [@hd, [@tl, [@tl, [@var, 13]]]]]
+                                                    , [@:=, 21, [@cons, [@quote, nil], [@quote, nil]]]
+                                                    , [@:=, 15, [@quote, nil]]
+                                                    ,
+                                                        [ @while, [@var, 16]
+                                                        ,
+                                                            [ [@:=, 20, [@hd, [@var, 16]]]
+                                                            , [@:=, 14, [@hd, [@var, 20]]]
+                                                            , [@:=, 38, [@cons, [@cons, [@var, 14], [@cons, [@var, 19], [@quote, nil]]], [@quote, nil]]]
+                                                            ,
+                                                                [ @if, [@quote, nil]
+                                                                , []
+                                                                ,
+                                                                    [ [@:=, 51, [@cons, [@quote, nil], [@quote, nil]]]
+                                                                    ,
+                                                                        [ @while, [@var, 38]
+                                                                        ,
+                                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                            ,
+                                                                                [ @if, [@var, 40]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            ]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 51, [@quote, nil]]
+                                                                                            ]
+                                                                                        ]
+                                                                                    ]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 51, [@quote, nil]]
+                                                                                            ]
+                                                                                        , []
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ,
+                                                                [ @if, [@var, 51]
+                                                                ,
+                                                                    [ [@:=, 15, [@cons, [@var, 22], [@var, 15]]]
+                                                                    , [@:=, 21, [@quote, nil]]
+                                                                    ]
+                                                                ,
+                                                                    [ [@:=, 15, [@cons, [@var, 20], [@var, 15]]]
+                                                                    ]
+                                                                ]
+                                                            , [@:=, 16, [@tl, [@var, 16]]]
+                                                            ]
+                                                        ]
+                                                    ,
+                                                        [ @if, [@var, 21]
+                                                        ,
+                                                            [ [@:=, 15, [@cons, [@var, 22], [@var, 15]]]
+                                                            ]
+                                                        , []
+                                                        ]
+                                                    , [@:=, 3, [@var, 15]]
+                                                    , [@:=, 2, [@tl, [@var, 2]]]
+                                                    , [@:=, 1, [@tl, [@tl, [@var, 1]]]]
+                                                    ]
+                                                ,
+                                                    [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                                    ,
+                                                        [ @if, [@quote, nil]
+                                                        , []
+                                                        ,
+                                                            [ [@:=, 53, [@cons, [@quote, nil], [@quote, nil]]]
+                                                            ,
+                                                                [ @while, [@var, 38]
+                                                                ,
+                                                                    [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                    , [@:=, 38, [@tl, [@var, 38]]]
+                                                                    , [@:=, 40, [@hd, [@var, 39]]]
+                                                                    , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                    ,
+                                                                        [ @if, [@var, 40]
+                                                                        ,
+                                                                            [
+                                                                                [ @if, [@var, 41]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                    , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                    ]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                    , [@:=, 53, [@quote, nil]]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ,
+                                                                            [
+                                                                                [ @if, [@var, 41]
+                                                                                ,
+                                                                                    [ [@:=, 38, [@quote, nil]]
+                                                                                    , [@:=, 53, [@quote, nil]]
+                                                                                    ]
+                                                                                , []
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ,
+                                                        [ @if, [@var, 53]
+                                                        ,
+                                                            [
+                                                                [ @if, [@var, 6]
+                                                                ,
+                                                                    [ [@:=, 11, [@hd, [@tl, [@var, 1]]]]
+                                                                    , [@:=, 1, [@tl, [@var, 1]]]
+                                                                    , [@:=, 8, [@hd, [@tl, [@tl, [@var, 11]]]]]
+                                                                    , [@:=, 9, [@var, 8]]
+                                                                    , [@:=, 10, [@quote, nil]]
+                                                                    , [@:=, 10, [@quote, nil]]
+                                                                    ,
+                                                                        [ @while, [@var, 9]
+                                                                        ,
+                                                                            [ [@:=, 10, [@cons, [@hd, [@var, 9]], [@var, 10]]]
+                                                                            , [@:=, 9, [@tl, [@var, 9]]]
+                                                                            ]
+                                                                        ]
+                                                                    , [@:=, 8, [@var, 10]]
+                                                                    ,
+                                                                        [ @while, [@var, 8]
+                                                                        ,
+                                                                            [ [@:=, 1, [@cons, [@hd, [@var, 8]], [@var, 1]]]
+                                                                            , [@:=, 8, [@tl, [@var, 8]]]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ,
+                                                                    [ [@:=, 1, [@tl, [@tl, [@var, 1]]]]
+                                                                    ]
+                                                                ]
+                                                            , [@:=, 2, [@tl, [@var, 2]]]
+                                                            ]
+                                                        ,
+                                                            [ [@:=, 38, [@cons, [@cons, [@var, 4], [@cons, [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@cons, [@quote, nil], [@quote, nil]]]]]]]]]]]]]], [@quote, nil]]], [@quote, nil]]]
+                                                            ,
+                                                                [ @if, [@quote, nil]
+                                                                , []
+                                                                ,
+                                                                    [ [@:=, 52, [@cons, [@quote, nil], [@quote, nil]]]
+                                                                    ,
+                                                                        [ @while, [@var, 38]
+                                                                        ,
+                                                                            [ [@:=, 39, [@hd, [@var, 38]]]
+                                                                            , [@:=, 38, [@tl, [@var, 38]]]
+                                                                            , [@:=, 40, [@hd, [@var, 39]]]
+                                                                            , [@:=, 41, [@hd, [@tl, [@var, 39]]]]
+                                                                            ,
+                                                                                [ @if, [@var, 40]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@cons, [@cons, [@hd, [@var, 40]], [@cons, [@hd, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            , [@:=, 38, [@cons, [@cons, [@tl, [@var, 40]], [@cons, [@tl, [@var, 41]], [@quote, nil]]], [@var, 38]]]
+                                                                                            ]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 52, [@quote, nil]]
+                                                                                            ]
+                                                                                        ]
+                                                                                    ]
+                                                                                ,
+                                                                                    [
+                                                                                        [ @if, [@var, 41]
+                                                                                        ,
+                                                                                            [ [@:=, 38, [@quote, nil]]
+                                                                                            , [@:=, 52, [@quote, nil]]
+                                                                                            ]
+                                                                                        , []
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ,
+                                                                [ @if, [@var, 52]
+                                                                ,
+                                                                    [ [@:=, 7, [@hd, [@tl, [@var, 1]]]]
+                                                                    ,
+                                                                        [ @if, [@var, 6]
+                                                                        ,
+                                                                            [ [@:=, 8, [@hd, [@tl, [@tl, [@var, 7]]]]]
+                                                                            ]
+                                                                        ,
+                                                                            [ [@:=, 8, [@hd, [@tl, [@tl, [@tl, [@var, 7]]]]]]
+                                                                            ]
+                                                                        ]
+                                                                    , [@:=, 1, [@tl, [@tl, [@var, 1]]]]
+                                                                    , [@:=, 9, [@var, 8]]
+                                                                    , [@:=, 10, [@quote, nil]]
+                                                                    , [@:=, 10, [@quote, nil]]
+                                                                    ,
+                                                                        [ @while, [@var, 9]
+                                                                        ,
+                                                                            [ [@:=, 10, [@cons, [@hd, [@var, 9]], [@var, 10]]]
+                                                                            , [@:=, 9, [@tl, [@var, 9]]]
+                                                                            ]
+                                                                        ]
+                                                                    , [@:=, 8, [@var, 10]]
+                                                                    ,
+                                                                        [ @while, [@var, 8]
+                                                                        ,
+                                                                            [ [@:=, 1, [@cons, [@hd, [@var, 8]], [@var, 1]]]
+                                                                            , [@:=, 8, [@tl, [@var, 8]]]
+                                                                            ]
+                                                                        ]
+                                                                    , [@:=, 2, [@tl, [@var, 2]]]
+                                                                    ]
+                                                                , []
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    , [@:=, 36, [@cons, [@var, 1], [@cons, [@var, 2], [@cons, [@var, 3], [@quote, nil]]]]]
+    ]
+, 36
+],[@doWhile,quote,nil]]"

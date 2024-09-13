@@ -1,0 +1,14 @@
+testingP read X {
+Stack := cons X nil;
+Y := nil;
+while Stack {
+D := hd Stack;
+Stack := tl Stack;
+if D {
+Stack := cons (hd D) (cons (tl D) Stack)
+}
+else
+{ Y := cons nil Y }
+}
+}
+write Y

@@ -1,0 +1,99 @@
+(* STEP.while
+
+  This is the STEP macro for the WH1LE  interpreter in WHILE
+  as specified in detail in Lecture 7.
+
+
+   It takes as input a list
+   [ CSt, DSt, val ]         where
+
+     * we may assume that CSt only contains correctly encoded program statements and expressions
+      (so no error handling needed)
+	 
+     * CSt is the command stack (for program traversal)
+     * DSt is the data stack (intermediate results)
+     * val  is the program store (memory) for variables
+	
+    Output is a new state   [ CSt', DSt', val' ] 
+    according to the interpretation of the topmost element of CSt. 
+
+   (c) 2008-21 Bernhard Reus 
+
+ This needs to be tested with the self interpreter u.while from Canvas
+ and the macros update.while, lookup.while, isnumber.while and reverse.while also from Canvas
+
+ *)
+
+
+
+
+STEP read state {
+    // retrieve individual arguments from list
+    CSt := hd state;
+    DSt:= hd tl state;
+    val := hd tl tl state;
+    St:= hd tl tl state;
+    C:= hd CSt;   // current command on top of Command stack
+
+    d:= hd C;     // is nil if C is a do_marker, otherwise not
+    if d 
+    {
+    // top level command executed that is of shape [op,arg1,…]
+         cur_op := d; // type of current command
+   	 arg := hd tl C;
+  	 arg2 := hd tl tl C; 
+   	 switch cur_op {
+    		case @quote: DSt:= cons arg DSt; CSt:= tl CSt
+     		case @var:  DSt := cons val DSt; CSt:= tl CSt
+     		case @hd: CSt:= cons arg cons @doHd (tl CSt)
+     		case @tl: CSt:= cons arg cons @doTl (tl CSt)
+ 		case @cons:  CSt := cons arg2 cons arg cons @doCons (tl CSt)                 
+ 		case @:=: CSt := cons arg2 cons @doAsgn (tl CSt)                   
+                case @while: CSt:= cons arg cons @doWhile CSt
+		case @if:  CSt:= cons arg cons @doIf CSt     
+       } // end switch
+     }    // end if
+     else {
+      // do_marker to be executed 
+     arg:= hd DSt;
+     switch C {
+     case @doHd:    DSt:= cons (hd arg) (tl DSt); CSt:= tl CSt
+     case @doTl:    DSt:= cons (tl arg) (tl DSt); CSt:= tl CSt
+     case @doCons:  arg2:= hd tl DSt; 
+                    DSt := cons (cons arg arg2) (tl tl DSt); 
+                    CSt:= tl CSt
+     case @doAsgn:  // fill in for Sheet 3
+     case @doWhile: if arg { wc:= hd tl CSt;
+     	  	       	     CSt:= tl CSt;
+                             B:= hd tl tl wc; // block to be added to current commands
+			     // add the commands of B in right order onto tl Stack;
+			     B := <reverse> B; // reverse to get the right order
+			     while B
+			             { CSt:= cons (hd B) CSt;
+			               B:= tl B
+			              }
+                        } else {  
+                          CSt := tl tl CSt   
+		        } ; 
+		     DSt := tl DSt
+			
+     case @doIf:   ifc:= hd tl CSt;
+     	  	   if arg {
+                   B:= hd tl tl ifc // then block to be added to current commands
+                   } 
+                   else {
+		          B:= hd tl tl tl ifc // else block to be added to current commands
+		        };
+		   CSt:= tl tl CSt;
+		    // add the commands of B in right order onto tl Stack;
+		    B := <reverse> B; // reverse to get the right order
+		    while B
+			 { CSt := cons (hd B) CSt;
+			   B := tl B
+			 };
+		    DSt := tl DSt
+    }     // end switch
+  };   // end if do_smth case
+  newState :=  [ CSt, DSt, val ]
+}
+write newState

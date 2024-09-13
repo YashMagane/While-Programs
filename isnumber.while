@@ -1,0 +1,9 @@
+isnumber read X {
+  isNum := cons nil nil;
+  while X {
+    if hd X {
+      isNum := nil
+    };
+    X := tl X
+  }
+}  write isNum

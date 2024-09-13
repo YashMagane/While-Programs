@@ -1,0 +1,44 @@
+(* update.while
+
+ This program takes as input a list [X, V, Store] where
+
+  X     is a number (in list form) that can be 0.
+  V 	is a data value
+  Store is a list of bindings containing the variables' values (store)
+
+  output is a new store in which the binding for X has been changed to V
+  If a binding for X does not appear in Store, a new one is created.
+
+
+   (c) 2008-16 Bernhard Reus 
+	
+*)
+
+
+update read L {
+ // first decompose argument X
+ X:= hd L;		(* X is variable code *)
+ V := hd tl L;		(* V is value used for update *) 
+ Store := hd tl tl X;
+ nb := [ X, V ];	(* nb = new binding for X *)
+ St := hd tl tl L;	(* St is store to be updated *)
+ miss := true;
+ NSt := nil; 		(* new store to be produced *)
+ while St { 		(* run through St destructively *)
+    bind := hd St;   (* bind is first binding of store *)
+    N := hd bind; 	(* N is variable code of bind *)
+    if N=X { 		(* variable X found *)
+    NSt := cons nb NSt; (* update new store *)
+    miss:= false 	(* set flag to remember this *)
+     }
+   else {
+     NSt := cons bind NSt (* copy binding in new store *)
+     };			(* end of if-the-else *)
+    St := tl St		(* move to next binding in St *)
+ } ;
+if miss			(* if var X not found add binding *)
+  { NSt := cons nb NSt
+  }
+}
+write NSt 		(* return updated store *)
+ 

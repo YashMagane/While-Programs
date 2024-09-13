@@ -1,0 +1,25 @@
+//Candidate Number: 249763
+(* concat.while
+*)
+
+concat read X {
+	Z := nil;
+	Y := nil;
+	while X {
+		listOfLists := hd X;
+		X := tl X;
+		while listOfLists {
+			currentItem := hd listOfLists;
+			listOfLists := tl listOfLists;
+			Z := cons currentItem Z
+		}
+
+	};
+	while Z {
+		currentItem := hd Z;
+		Z := tl Z;
+		Y := cons currentItem Y
+	}
+
+}
+write Y

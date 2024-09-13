@@ -1,0 +1,11 @@
+program read nm {
+
+m := hd nm; 
+if m {
+ n := tl m
+ }
+else { 
+   n:= cons nil nil
+   }
+}
+write n 
